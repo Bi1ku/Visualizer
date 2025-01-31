@@ -1,4 +1,6 @@
 interface BasePoint {
+  index: number;
+  name: string;
   x: number;
   y: number;
 }
