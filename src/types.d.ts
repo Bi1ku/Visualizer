@@ -1,4 +1,6 @@
 interface BasePoint {
+  index: number;
+  name: string;
   x: number;
   y: number;
 }
@@ -47,18 +49,18 @@ interface FPALine {
 }
 
 interface FPASettings {
-    xVelocity: number;
-    yVelocity: number;
-    aVelocity: number
-    kFriction: number;
-    rWidth: number;
-    rHeight: number;
+  xVelocity: number;
+  yVelocity: number;
+  aVelocity: number;
+  kFriction: number;
+  rWidth: number;
+  rHeight: number;
 }
 
 interface Shape {
-    id: string;
-    name?: string;
-    vertices: BasePoint[];
-    color: string;
-    fillColor: string;
+  id: string;
+  name?: string;
+  vertices: BasePoint[];
+  color: string;
+  fillColor: string;
 }

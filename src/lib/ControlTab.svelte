@@ -324,6 +324,15 @@
         <div class="flex flex-col justify-start items-start">
           <div class="font-light">End Point:</div>
           <div class="flex flex-row justify-start items-center gap-2">
+
+          <div class="font-extralight">Name:</div>
+          <input
+              class="pl-1.5 rounded-md bg-neutral-100 dark:bg-neutral-950 dark:border-neutral-700 border-[0.5px] focus:outline-none w-28"
+              step="0.1"
+              type="text"
+              bind:value={line.endPoint.name}
+          />
+
             <div class="font-extralight">X:</div>
             <input
               class="pl-1.5 rounded-md bg-neutral-100 dark:bg-neutral-950 dark:border-neutral-700 border-[0.5px] focus:outline-none w-28"
@@ -426,6 +435,15 @@ With tangential heading, the heading follows the direction of the line."
           <div class="flex flex-col justify-start items-start">
             <div class="font-light">Control Point {idx1 + 1}:</div>
             <div class="flex flex-row justify-start items-center gap-2">
+
+              <div class="font-extralight">Name:</div>
+              <input
+                class="pl-1.5 rounded-md bg-neutral-100 dark:bg-neutral-950 dark:border-neutral-700 border-[0.5px] focus:outline-none w-28"
+                step="0.1"
+                type="text"
+                bind:value={point.name}
+              />
+
               <div class="font-extralight">X:</div>
               <input
                 class="pl-1.5 rounded-md bg-neutral-100 dark:bg-neutral-950 dark:border-neutral-700 border-[0.5px] focus:outline-none w-28"

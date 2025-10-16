@@ -674,8 +674,21 @@
   });
 
   function saveFile() {
-    const jsonString = JSON.stringify({ startPoint, lines, shapes });
+    startPoint.index = 0;
 
+    let index = 1;
+    for (const line of lines) {
+      line.endPoint.index = index;
+      index++;
+
+      if (line.controlPoints)
+        for (const point of line.controlPoints) {
+          point.index = index;
+          index++;
+        }
+    }
+
+    const jsonString = JSON.stringify({ startPoint, lines }, null, 4);
     const blob = new Blob([jsonString], { type: "application/json" });
 
     const linkObj = document.createElement("a");
